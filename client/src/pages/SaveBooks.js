@@ -13,7 +13,7 @@ class SaveBooks extends Component {
     API.getBooks()
       .then((data) => {
         console.log(data)
-        return this.setState({ results: [] });
+        return this.setState({ results: data.data });
       })
       .catch(err => console.log(err));
   };
